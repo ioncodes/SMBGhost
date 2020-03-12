@@ -19,3 +19,12 @@ SMB version 0x311 with context 0x2 was found which indicates SMBv3.1.1 is being 
 ```
 
 ![vulnerable](vulnerable.png)
+
+## Workarounds
+If you are unable to install the security patch provided by Microsoft please consider disabling SMB compression using the following command:
+
+```powershell
+Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters" DisableCompression -Type DWORD -Value 1 -Force
+```
+
+However, this will not protect you from getting exploited if you are the client connecting to an exploited machine.
