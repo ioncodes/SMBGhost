@@ -17,3 +17,5 @@ Some output was ommited for the sake of a cleaner README. If you are vulnerable,
 ```
 SMB version 0x311 with context 0x2 was found which indicates SMBv3.1.1 is being used and SMB compression is enabled, therefore being vulnerable to CVE-2020-0796!
 ```
+
+![vulnerable](vulnerable.png)
