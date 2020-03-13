@@ -1,6 +1,7 @@
 # SMBGhost
 This repository contains my scanner script which lets you know whether your server uses SMBv3.1.1 and has SMB compression enabled. Ultimately, this means you are vulnerable to [CVE-2020-0796](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2020-0796). At this point of time a security patch was released, please make sure to update!  
-It also offers a fully documented packet structure which can be utilized for further investigations targeting the SMB protocol.
+It also offers a fully documented packet structure which can be utilized for further investigations targeting the SMB protocol.  
+Keep in mind that this scanner will only tell you whether you have SMBv3.1.1 and SMB compression enabled or not. It will mark a patched system as vulnerable as well!
 
 ## Usage
 The module has extensive logging and requires the library `hexdump` which you can install with `pip3 install --user hexdump`. If you don't want logging you can use the script in `logless_scanner.py`.
